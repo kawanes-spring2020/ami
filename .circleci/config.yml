@@ -9,7 +9,9 @@ jobs:
       - run:
           name: Validate packer
           command: packer validate ami_packer.json
-      
+      - run:
+          name: Build Packer
+          command: packer build ami_packer.json
 
 workflows:
   version: 2
