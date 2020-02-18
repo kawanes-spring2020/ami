@@ -1,2 +1,2 @@
 # ami
-Private repository for AWS AMI
+Private repository for AWS AMI Packer
