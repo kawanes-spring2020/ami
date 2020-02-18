@@ -15,9 +15,9 @@ jobs:
 
 workflows:
   version: 2
-  build-and-deploy:
+  build_deploy-workflow:
     jobs:
-      - validate
+    - validate:
           filters:
             branches:
-              only: master 
+              only: master
