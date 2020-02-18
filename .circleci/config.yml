@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  validate:
+    docker:
+      - image: hashicorp/packer:1.1.1
+    working_directory: ~/packer
+    steps:
+      - checkout
+      - run:
+          name: Validate packer
+          command: packer validate -var-file=packer_vars.json ami_packer.json
+      - run:
+          name: Build packer
+          command: packer build -var-file=packer_vars.json ami_packer.json
+
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - validate
+
