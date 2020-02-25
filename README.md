@@ -7,5 +7,5 @@
 
 # Validate the template using Packer validate filename.json
 
-# If successful build the packer using  Packer build filename.json
+# If successful build the packer using  Packer build filename.json   ss
 
