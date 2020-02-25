@@ -8,4 +8,5 @@
 # Validate the template using Packer validate filename.json
 
 # If successful build the packer using  Packer build filename.json
+check Assignment 6 changes
 
