@@ -16,7 +16,7 @@ check Assignment 6 changes
 >>>>>>> 924aaaa506880f186f5d2112c1f50949e4490395
 =======
 # If successful build the packer using  Packer build filename.json
-check Assignment 6 changes
+check Assignment 6 changes  new changes
 
 
 
