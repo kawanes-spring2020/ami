@@ -11,7 +11,7 @@
     "builders": [
         {
             "type": "amazon-ebs",
-	    "ami_users":"{{user `ami_users`}}",
+	        "ami_users":"{{user `ami_users`}}",
             "access_key": "{{user `aws_access_key`}}",
             "secret_key": "{{user `aws_secret_key`}}",
             "region": "{{user `aws_region`}}",
@@ -39,14 +39,23 @@
             ],
             "inline": [
                 "sudo apt-get update",
-		"sudo add-apt-repository ppa:openjdk-r/ppa",
+		        "sudo add-apt-repository ppa:openjdk-r/ppa",
                 "sudo apt-get update",
                 "sudo apt-get install -y openjdk-8-jdk",
                 "java -version",
                 "sudo apt-get install -y tomcat8",
                 "sudo apt install maven -y",
-                "sudo apt install unzip"
+                "sudo apt install unzip",
+                "sudo apt-get install ruby -y",
+                "sudo apt-get install wget",
+                "cd /home/ubuntu",
+                "wget https://aws-codedeploy-us-east-2.s3.us-east-2.amazonaws.com/latest/install",
+                "chmod +x ./install",
+                "sudo ./install auto",
+                "sudo service codedeploy-agent start",
+                "sudo service codedeploy-agent status"
             ]
         }
     ]
 }
+
